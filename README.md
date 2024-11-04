@@ -1,4 +1,4 @@
-# Nama: Azzahra Salsabila | NPM: 2306219934 | Kelas: PBP A
+Nama: Azzahra Salsabila | NPM: 2306219934 | Kelas: PBP A
 
 # Tugas 7
 * ***Jelaskan apa yang dimaksud dengan _stateless widget_ dan _stateful widget_, dan jelaskan perbedaan dari keduanya.***
