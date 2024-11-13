@@ -36,3 +36,52 @@ Nama: Azzahra Salsabila | NPM: 2306219934 | Kelas: PBP A
     4. Membuat class ```ItemCard``` yang digunakan untuk menampikan tombol-tombolnya, pada class ini juga dimasukkan ```snackbar``` yang akan muncul ketika tombol ditekan dengan Scaffold.
     5. Untuk mengubah warna pada proyek, saya mengatur warna tema pada ```MaterialApp``` dengan ```primarySwatch``` dan ```secondary``` pada ```main.dart``` menjadi warna teal.
     6. Untuk snackbar sendiri, cara implementasinya dengan menggunakan ```InkWell``` agar elemen menjadi interaktif, lalu ```ScaffoldMessanger.of(context)``` untuk mengakses dan menampilkan snackbar dalam ```Scaffold```, lalu untuk snackbarnya berupa ```Text``` yang menampilkan pesan dari item yang ditekan.
+
+# Tugas 8
+* ***Apa kegunaan const di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan const, dan kapan sebaiknya tidak digunakan?***
+    - const digunakan untuk membuat objek yang bersifat immutable dan ditentukan pada waktu kompilasi.
+    - Keuntungan menggunakan const diantaranya dapat mengoptimasi memori, yaitu objek yang sama dengan nilai yang sama akan disimpan hanya sekali dalam memori, selain itu const membuat aplikasi berjalan lebih efisien karena tidak perlu membuat ulang objek setiap kali akan digunakan. 
+    - Kita dapat menggunakan const saat mendefinisikan widget yang tidak berubah untuk meningkatkan performance. 
+    - Kita sebaiknya menghindari penggunaan const jika widget atau data di dalamnya akan berubah secara dinamis saat runtime.
+  
+* ***Jelaskan dan bandingkan penggunaan Column dan Row pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!***
+    - Column digunakan untuk menata widget anak secara vertikal, satu di atas yang lain, berguna ketika kita ingin membuat elemen yang tersusun ke bawah, seperti daftar item atau formulir input.
+    - Contoh penggunaan column:
+      ```Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+      Text('Item 1'),
+      Text('Item 2'),
+      Text('Item 3'),
+      ],
+      );```
+    - Row digunakan untuk menata widget anak secara horizontal, berdampingan satu sama lain, berguna untuk membuat elemen seperti baris ikon atau tombol navigasi.
+    - Contoh penggunaan row:
+      ```Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Icon(Icons.star),
+          Icon(Icons.favorite),
+          Icon(Icons.thumb_up),
+        ],
+      );```
+    - Perbandingan penggunaan: Column mengatur elemen secara vertikal ke bawah, sedangkan Row menyusun elemen secara horizontal berdampingan. Keduanya memiliki properti seperti ```mainAxisAlignment``` dan ```crossAxisAlignment``` untuk mengatur posisi elemen di sumbu utama dan sumbu silang. Column cocok untuk daftar item atau elemen vertikal, sementara Row lebih tepat untuk elemen sejajar seperti ikon atau tombol.
+
+* ***Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!***
+    - Elemen input yang saya gunakan pada tugas kali ini adalah ```TextFormField``` yang digunakan beberapa kali untuk menerima input dari pengguna, elemen ini mendukung validasi input dan memiliki dekorasi khusus untuk menampilkan hint dan label teks.
+    - Elemen input flutter lain yang tidak digunakan adalah:
+      - Checkbox: Checkbox biasanya digunakan untuk menerima input biner (ya/tidak).
+      - Radio Button: Radio button cocok untuk memilih satu opsi dari beberapa pilihan yang tersedia.
+      - Switch: Switch digunakan untuk mengaktifkan atau menonaktifkan fitur dengan pilihan antara dua status (on/off).
+      - DropdownButton: Elemen ini digunakan jika ingin menampilkan daftar pilihan dalam bentuk menu tarik-turun.
+      - Slider: Elemen ini cocok untuk memilih nilai dari suatu rentang dengan cara menyeret indikator.
+      - DatePicker & TimePicker: Ini digunakan untuk memilih tanggal atau waktu.
+      - GestureDetector: Elemen ini berguna untuk mendeteksi berbagai jenis interaksi pengguna seperti ketukan atau geseran pada widget.
+      
+* ***Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?***
+    - Penerapan tema dalam aplikasi Flutter pada tugas saya dilakukan dengan menggunakan ```ThemeData``` untuk mendefinisikan skema warna dan elemen visual global. Tema utama ditentukan melalui ```colorScheme```, dengan ```primarySwatch``` diatur ke warna teal agar konsisten pada elemen UI seperti AppBar dan tombol. Warna sekunder diatur dengan ```copyWith```, menggunakan teal yang lebih terang. Aplikasi ini juga mengaktifkan Material 3 dengan properti ```useMaterial3: true```. Tema ini diterapkan pada widget ```MaterialApp```, agar seluruh aplikasi menggunakan skema warna yang sama.
+
+* ***Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?***
+    - Cara saya menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter adalah dengan ```Navigator.push```, yang menambahkan halaman baru ke tumpukan navigasi tanpa menggantikan halaman yang ada. Contohnya menggunakan ```Navigator.push``` dengan ```MaterialPageRoute``` untuk menavigasi ke halaman ```ShopEntryFormPage```. Metode lain seperti ```Navigator.pushReplacement``` dapat digunakan untuk menggantikan halaman saat ini dengan halaman baru, tanpa menambahkannya ke tumpukan navigasi. Untuk kembali ke halaman sebelumnya, dapat menggunakan ```Navigator.pop```.
