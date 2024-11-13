@@ -75,7 +75,7 @@ class _ShopEntryFormPageState extends State<ShopEntryFormPage> {
                       ),
                       onChanged: (String? value) {
                         setState(() {
-                          _rating = int.tryParse(value!) ?? 0;
+                          _amount = int.tryParse(value!) ?? 0;
                         });
                       },
                       validator: (String? value) {
@@ -162,7 +162,7 @@ class _ShopEntryFormPageState extends State<ShopEntryFormPage> {
                       ),
                       onChanged: (String? value) {
                         setState(() {
-                          _rating = int.tryParse(value!) ?? 0;
+                          _price = int.tryParse(value!) ?? 0;
                         });
                       },
                       validator: (String? value) {
