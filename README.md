@@ -47,18 +47,20 @@ Nama: Azzahra Salsabila | NPM: 2306219934 | Kelas: PBP A
 * ***Jelaskan dan bandingkan penggunaan Column dan Row pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!***
     - Column digunakan untuk menata widget anak secara vertikal, satu di atas yang lain, berguna ketika kita ingin membuat elemen yang tersusun ke bawah, seperti daftar item atau formulir input.
     - Contoh penggunaan column:
-      ```Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-      Text('Item 1'),
-      Text('Item 2'),
-      Text('Item 3'),
-      ],
-      );```
+      ```Column
+      Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text('Item 1'),
+          Text('Item 2'),
+          Text('Item 3'),
+        ],
+      );
     - Row digunakan untuk menata widget anak secara horizontal, berdampingan satu sama lain, berguna untuk membuat elemen seperti baris ikon atau tombol navigasi.
     - Contoh penggunaan row:
-      ```Row(
+      ```Row
+      Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
@@ -66,7 +68,7 @@ Nama: Azzahra Salsabila | NPM: 2306219934 | Kelas: PBP A
           Icon(Icons.favorite),
           Icon(Icons.thumb_up),
         ],
-      );```
+      );
     - Perbandingan penggunaan: Column mengatur elemen secara vertikal ke bawah, sedangkan Row menyusun elemen secara horizontal berdampingan. Keduanya memiliki properti seperti ```mainAxisAlignment``` dan ```crossAxisAlignment``` untuk mengatur posisi elemen di sumbu utama dan sumbu silang. Column cocok untuk daftar item atau elemen vertikal, sementara Row lebih tepat untuk elemen sejajar seperti ikon atau tombol.
 
 * ***Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!***
