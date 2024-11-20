@@ -126,5 +126,3 @@ Nama: Azzahra Salsabila | NPM: 2306219934 | Kelas: PBP A
       2. Hapus Sesi di Django: Django menghapus cookie sesi pengguna.
       3. Respon ke Flutter: Server mengirim status logout berhasil.
       4. Arahkan ke Login: Flutter menghapus data sesi di CookieRequest dan mengarahkan pengguna kembali ke halaman login.
-
-* ***Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).***
